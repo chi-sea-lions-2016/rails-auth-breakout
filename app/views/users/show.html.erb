@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @user.username %>'s Books</h1>
+
+<% if @books.empty? %>
+  <p>No books!</p>
+<% else %>
+  <ul>
+  <% @books.each do |book| %>
+    <li><%= book.title %> - <%= book.author %></li>
+  <% end %>
+  </ul>
+<% end %>
